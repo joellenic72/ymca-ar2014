@@ -36,6 +36,12 @@ body {
 	}
 }
 
+
+// Load Fonts
+
+// Cachet Bold
+@include font-face("cachet-bold", "../../fonts/cachet-bold");
+
 // Easy Remove for mobile
 /*
 .nomobile {

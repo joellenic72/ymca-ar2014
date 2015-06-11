@@ -1,9 +1,14 @@
 // Typography
 $base-font-family: $helvetica;
-$heading-font-family: $base-font-family;
+$heading-font-family: "cachet-bold";
 
-// Font Sizes
-$base-font-size: 1em;
+// Font Sizes - Typographic Scale: Golden Section
+
+$base-font-size: 1.125em;
+$h1: 4.222222222em;
+$h2: 2.611111111em;
+$h3: 1.611111111em;
+$h4: 1em;
 
 // Line height
 $base-line-height: 1.5;
@@ -20,6 +25,36 @@ $blue: #477dca;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$background-color: #fafafa;
+
+//YMCA Brand Colors
+$black: #000000;
+$grey: #626366;
+
+// Group 1: Greens
+$green3: #156a69;
+$green2: #26a995;
+$green1: #3cbcbb;
+
+// Group 2: Blues
+$blue3: #1664aa;
+$blue2: #218bca;
+$blue1: #2bafe9;
+
+// Group 3: Purples
+$purple3: #5b358d;
+$purple2: #8f318b;
+$purple1: #c1288a;
+
+// Group 4: Reds
+$red3: #a42e37;
+$red2: #e72534;
+$red1: #ec5c37;
+
+// Group 5: Oranges
+$orange3: #d95a38;
+$orange2: #f0793b;
+$orange1: #f7ad40;
 
 // Font Colors
 $base-background-color: #fff;
