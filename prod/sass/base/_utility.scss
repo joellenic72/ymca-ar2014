@@ -51,3 +51,105 @@ body {
 	}
 }
 */
+
+// Grid
+// Add Classes for Neat Grid
+
+
+.full-width {
+	@include outer-container;
+}
+
+.11-col {
+	@include span-columns(11);
+}
+
+.10-col {
+	@include span-columns(10);
+}
+
+.9-col {
+	@include span-columns(9);
+}
+
+.8-col {
+	@include span-columns(8);
+}
+
+.7-col {
+	@include span-columns(7);
+}
+
+.6-col {
+	@include span-columns(6);
+}
+
+.5-col {
+	@include span-columns(5);
+}
+
+.4-col {
+	@include span-columns(4);
+}
+
+.3-col {
+	@include span-columns(3);
+}
+
+.2-col {
+	@include span-columns(2);
+}
+
+.1-col {
+	@include span-columns(1);
+}
+
+.omega {
+	@include omega();
+}
+
+// Shift Columns
+
+.shift-11 {
+	@include shift(11);
+}
+
+.shift-10 {
+	@include shift(10);
+}
+
+.shift-9 {
+	@include shift(9);
+}
+
+.shift-8 {
+	@include shift(8);
+}
+
+.shift-7 {
+	@include shift(7);
+}
+
+.shift-6 {
+	@include shift(6);
+}
+
+.shift-5 {
+	@include shift(5);
+}
+
+.shift-4 {
+	@include shift(4);
+}
+
+.shift-3 {
+	@include shift(3);
+}
+
+.shift-2 {
+	@include shift(2);
+}
+
+.shift-1 {
+	@include shift(1);
+}
