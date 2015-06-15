@@ -4,7 +4,6 @@ body {
 	background-color: $bg-color;
 }
 
-
 .wrap {
 	height: 100%;
 }
@@ -51,6 +50,7 @@ body {
 
 .areas_of_focus {
 	width: 100%;
+	padding-top: 40%;
 	@include media($medium-screen) {
 		@include outer-container;
 	}
