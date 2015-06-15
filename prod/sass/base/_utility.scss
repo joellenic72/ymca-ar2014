@@ -36,8 +36,19 @@ body {
 	}
 }
 
+// Vertical Center mixin
 
-// Load Fonts
+%vertical-center {
+	position: relative;
+	top: 50%;
+	@include transform(translateY(-50%));
+}
+
+
+
+/*=======================================
+LOAD FONTS
+========================================*/
 
 // Cachet Bold
 @include font-face("cachet-bold", "../../fonts/cachet-bold");
