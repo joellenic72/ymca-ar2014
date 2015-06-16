@@ -6,6 +6,7 @@ body {
 
 .wrap {
 	height: 100%;
+	@include clearfix;
 }
 
 .opener {
@@ -53,5 +54,39 @@ body {
 	padding-top: 40%;
 	@include media($medium-screen) {
 		@include outer-container;
+	}
+}
+
+.footer {
+	width: 100%;
+	img {
+		display: block;
+	}
+	.footer_info {
+		background: $green2;
+		color: $white;
+		@include clearfix;
+		text-align: center;
+		@include media($medium-screen) {
+			text-align: left;
+		}
+		.footer_social {
+			display: block;
+			@include media($medium-screen) {
+				display: inline-block;
+				float: right;
+			}
+		}
+
+		.copyright {
+			display: block;
+			@include media($medium-screen) {
+				display: inline-block;
+				float: left;
+			}
+			p {
+				font-size: 1rem;
+			}
+		}
 	}
 }

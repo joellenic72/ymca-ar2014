@@ -44,6 +44,7 @@ h4 {
 }
 
 p {
+  font-size: $base-font-size;
   margin: 0 0 $small-spacing;
 }
 
@@ -76,4 +77,8 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+.small-txt {
+  font-size: $small-text;
 }

@@ -36,6 +36,16 @@ body {
 	}
 }
 
+// Easy Remove for mobile
+
+.nomobile {
+	// Need to re-write for neat
+	@include media($mobile) {
+		display: none;
+	}
+}
+
+
 // Vertical Center mixin
 
 %vertical-center {
@@ -53,15 +63,10 @@ LOAD FONTS
 // Cachet Bold
 @include font-face("cachet-bold", "../../fonts/cachet-bold");
 
-// Easy Remove for mobile
-/*
-.nomobile {
-	// Need to re-write for neat
-	@include breakpoint(mobile) {
-		display: none;
-	}
-}
-*/
+// Metrize Icons
+@include font-face("Metrize-Icons", "../../fonts/Metrize-Icons");
+
+
 
 /*=======================================
 GRID HELPER CLASSES
