@@ -55,8 +55,193 @@ body {
 	@include media($medium-screen) {
 		@include outer-container;
 	}
+
+	.youth_development {
+		text-align: center;
+		position: relative;
+		@include clearfix;
+
+		@include media($large-screen) {
+			text-align: left;
+		}
+
+		.figure_wrap {
+			width: 40%;
+			float: left;
+			position: absolute;
+			z-index: 10;
+			figure {
+				width: 19rem;
+				height: 19rem;
+				border-radius: 19rem;
+				border: 10px solid $orange2;
+				box-shadow: 3px 6px 0px 4px $orange3;
+				background: url(../../img/youth-development.jpg) no-repeat;
+				margin: 0 auto;
+				
+				@include media($large-screen) {
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
+					padding-bottom: 100%;
+					border: 16px solid $orange2;
+					box-shadow: 3px 10px 0px 4px $orange3;
+				}
+			}
+		}
+
+		.focus_area_desc {
+			position: relative;
+			@include media($large-screen) {
+				float: left;
+				//width: 60%;
+				@include shift(4);
+				@include span-columns(8 of 12);
+				padding-bottom: 45%;
+				background-image: url('../../img/areas-of-focus-cloud.svg');
+				background-repeat: no-repeat;
+				background-size: 100%;
+				background-position: center;
+			}
+
+			.excerpt {
+
+				@include media($large-screen) {
+					position: absolute;
+					@extend %vertical-center;
+					padding: 0 6em 0 5em;
+				}
+
+			}
+		}
+	}
+
+	.healthy_living {
+		text-align: center;
+		position: relative;
+		@include clearfix;
+
+		@include media($large-screen) {
+			text-align: left;
+		}
+
+		.figure_wrap {
+			width: 40%;
+			right: 0;
+			position: absolute;
+			z-index: 10;
+			figure {
+				width: 19rem;
+				height: 19rem;
+				border-radius: 19rem;
+				border: 10px solid $orange2;
+				box-shadow: 3px 6px 0px 4px $orange3;
+				background: url(../../img/healthy-living.jpg) no-repeat;
+				margin: 0 auto;
+				
+				@include media($large-screen) {
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
+					padding-bottom: 100%;
+					border: 16px solid $orange2;
+					box-shadow: 3px 10px 0px 4px $orange3;
+				}
+			}
+		}
+
+		.focus_area_desc {
+			position: relative;
+			@include media($large-screen) {
+				float: left;
+				//width: 60%;
+				//@include shift(4);
+				@include span-columns(8 of 12);
+				padding-bottom: 45%;
+				background-image: url('../../img/areas-of-focus-cloud.svg');
+				background-repeat: no-repeat;
+				background-size: 100%;
+				background-position: center;
+			}
+
+			.excerpt {
+
+				@include media($large-screen) {
+					position: absolute;
+					@extend %vertical-center;
+					padding: 0 6em 0 5em;
+				}
+
+			}
+		}
+	}
+
+
+
+	.social_responsibility {
+		text-align: center;
+		position: relative;
+		@include clearfix;
+
+		@include media($large-screen) {
+			text-align: left;
+		}
+
+		.figure_wrap {
+			width: 40%;
+			float: left;
+			position: absolute;
+			z-index: 10;
+			figure {
+				width: 19rem;
+				height: 19rem;
+				border-radius: 19rem;
+				border: 10px solid $orange2;
+				box-shadow: 3px 6px 0px 4px $orange3;
+				background: url(../../img/social-responsibility.jpg) no-repeat;
+				margin: 0 auto;
+				
+				@include media($large-screen) {
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
+					padding-bottom: 100%;
+					border: 16px solid $orange2;
+					box-shadow: 3px 10px 0px 4px $orange3;
+				}
+			}
+		}
+
+		.focus_area_desc {
+			position: relative;
+			@include media($large-screen) {
+				float: left;
+				//width: 60%;
+				@include shift(4);
+				@include span-columns(8 of 12);
+				padding-bottom: 45%;
+				background-image: url('../../img/areas-of-focus-cloud.svg');
+				background-repeat: no-repeat;
+				background-size: 100%;
+				background-position: center;
+			}
+
+			.excerpt {
+
+				@include media($large-screen) {
+					position: absolute;
+					@extend %vertical-center;
+					padding: 0 6em 0 5em;
+				}
+
+			}
+		}
+	}
 }
 
+
+
+// Footer Styles
 .footer {
 	width: 100%;
 	img {
@@ -68,6 +253,7 @@ body {
 		@include clearfix;
 		text-align: center;
 		@include media($medium-screen) {
+			padding-top: $base-spacing;
 			text-align: left;
 		}
 		.footer_social {
@@ -75,6 +261,27 @@ body {
 			@include media($medium-screen) {
 				display: inline-block;
 				float: right;
+				padding-right: 5%;
+			}
+			
+			h4 {
+				margin: 0 0 $small-spacing 0;
+			}
+
+			.social_icons {
+				padding-bottom: $base-spacing;
+
+				li {
+					display: inline-block;
+					padding-right: em(15);
+					&:last-child {
+						padding-right: 0;
+					}
+					a {
+						font-size: em(32);
+						color: $white;
+					}
+				}
 			}
 		}
 
@@ -83,6 +290,7 @@ body {
 			@include media($medium-screen) {
 				display: inline-block;
 				float: left;
+				padding: 2.5rem 0 0 5%;
 			}
 			p {
 				font-size: 1rem;
