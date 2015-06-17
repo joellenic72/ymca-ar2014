@@ -51,8 +51,9 @@ body {
 
 .areas_of_focus {
 	width: 100%;
-	padding-top: 40%;
+	padding: 40% 0 0 0;
 	@include media($medium-screen) {
+		padding: 40% 5% 0 5%;
 		@include outer-container;
 	}
 
@@ -66,24 +67,27 @@ body {
 		}
 
 		.figure_wrap {
-			width: 40%;
-			float: left;
-			position: absolute;
+			width: 65%;
 			z-index: 10;
+			margin: 0 auto;
+			position: relative;
+			
+			@include media($large-screen) {
+				width: 40%;
+				position: absolute;
+			}
+
 			figure {
-				width: 19rem;
-				height: 19rem;
-				border-radius: 19rem;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				padding-bottom: 100%;
 				border: 10px solid $orange2;
 				box-shadow: 3px 6px 0px 4px $orange3;
 				background: url(../../img/youth-development.jpg) no-repeat;
 				margin: 0 auto;
 				
 				@include media($large-screen) {
-					width: 100%;
-					height: 100%;
-					border-radius: 50%;
-					padding-bottom: 100%;
 					border: 16px solid $orange2;
 					box-shadow: 3px 10px 0px 4px $orange3;
 				}
@@ -92,24 +96,57 @@ body {
 
 		.focus_area_desc {
 			position: relative;
-			@include media($large-screen) {
-				float: left;
-				//width: 60%;
-				@include shift(4);
-				@include span-columns(8 of 12);
-				padding-bottom: 45%;
+			background-image: url('../../img/areas-of-focus-cloud-mobile.svg');
+			background-size: 230%;
+			padding-bottom: 188%;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin-top: -18%;
+			
+			@include media($mobile-1) {
+				background-size: 160%;
+				padding-bottom: 188%;
+			}
+
+			@include media($mobile-2) {
+				background-size: 190%;
+  				padding-bottom: 155%;
+			}
+
+			@include media($mobile-3) {
+				background-size: 114%;
+  				padding-bottom: 94%;
+			}
+
+			@include media($medium-screen) {
+				padding-bottom: 54%;
 				background-image: url('../../img/areas-of-focus-cloud.svg');
-				background-repeat: no-repeat;
 				background-size: 100%;
-				background-position: center;
+				margin-top: 0;
+			}
+
+			@include media($large-screen) {
+				@include shift(3);
+				@include span-columns(9 of 12);
+				padding-bottom: 54%;
+				background-image: url('../../img/areas-of-focus-cloud.svg');
+				background-size: 100%;
 			}
 
 			.excerpt {
-
+				position: absolute;
+				padding: 0 5%;
 				@include media($large-screen) {
-					position: absolute;
+					
 					@extend %vertical-center;
-					padding: 0 6em 0 5em;
+					padding: 0 15% 0 23%;
+				}
+
+				h2 {
+					margin: 0 0 $small-spacing 0;
+					@include media($large-screen) {
+						margin: $h2-margin-top 0 $small-spacing 0;
+					}
 				}
 
 			}
@@ -126,24 +163,28 @@ body {
 		}
 
 		.figure_wrap {
-			width: 40%;
-			right: 0;
-			position: absolute;
+			width: 65%;
+			margin: 0 auto;
 			z-index: 10;
+			position: relative;
+
+			@include  media($large-screen) {
+				width: 40%;
+				right: 0;
+				position: absolute;
+			}
+
 			figure {
-				width: 19rem;
-				height: 19rem;
-				border-radius: 19rem;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				padding-bottom: 100%;
 				border: 10px solid $orange2;
 				box-shadow: 3px 6px 0px 4px $orange3;
 				background: url(../../img/healthy-living.jpg) no-repeat;
 				margin: 0 auto;
 				
 				@include media($large-screen) {
-					width: 100%;
-					height: 100%;
-					border-radius: 50%;
-					padding-bottom: 100%;
 					border: 16px solid $orange2;
 					box-shadow: 3px 10px 0px 4px $orange3;
 				}
@@ -152,12 +193,25 @@ body {
 
 		.focus_area_desc {
 			position: relative;
+			background-image: url('../../img/areas-of-focus-cloud-mobile.svg');
+			padding-bottom: 133%;
+			background-repeat: no-repeat;
+			background-size: 160%;
+			background-position: center;
+			margin-top: -18%;
+
+			@include media($medium-screen) {
+				padding-bottom: 54%;
+				background-image: url('../../img/areas-of-focus-cloud.svg');
+				background-repeat: no-repeat;
+				background-size: 100%;
+				background-position: center;
+				margin-top: 0;
+			}
+
 			@include media($large-screen) {
-				float: left;
-				//width: 60%;
-				//@include shift(4);
-				@include span-columns(8 of 12);
-				padding-bottom: 45%;
+				@include span-columns(9 of 12);
+				padding-bottom: 54%;
 				background-image: url('../../img/areas-of-focus-cloud.svg');
 				background-repeat: no-repeat;
 				background-size: 100%;
@@ -165,11 +219,17 @@ body {
 			}
 
 			.excerpt {
-
+				position: absolute;
 				@include media($large-screen) {
-					position: absolute;
 					@extend %vertical-center;
-					padding: 0 6em 0 5em;
+					padding: 0 21% 0 10%;
+				}
+
+				h2 {
+					margin: 0 0 $small-spacing 0;
+					@include media($large-screen) {
+						margin: $h2-margin-top 0 $small-spacing 0;
+					}
 				}
 
 			}
@@ -179,7 +239,7 @@ body {
 
 
 	.social_responsibility {
-		text-align: center;
+				text-align: center;
 		position: relative;
 		@include clearfix;
 
@@ -188,24 +248,27 @@ body {
 		}
 
 		.figure_wrap {
-			width: 40%;
-			float: left;
-			position: absolute;
+			width: 65%;
 			z-index: 10;
+			margin: 0 auto;
+			position: relative;
+			
+			@include media($large-screen) {
+				width: 40%;
+				position: absolute;
+			}
+
 			figure {
-				width: 19rem;
-				height: 19rem;
-				border-radius: 19rem;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				padding-bottom: 100%;
 				border: 10px solid $orange2;
 				box-shadow: 3px 6px 0px 4px $orange3;
-				background: url(../../img/social-responsibility.jpg) no-repeat;
+				background: url(../../img/youth-development.jpg) no-repeat;
 				margin: 0 auto;
 				
 				@include media($large-screen) {
-					width: 100%;
-					height: 100%;
-					border-radius: 50%;
-					padding-bottom: 100%;
 					border: 16px solid $orange2;
 					box-shadow: 3px 10px 0px 4px $orange3;
 				}
@@ -214,12 +277,25 @@ body {
 
 		.focus_area_desc {
 			position: relative;
+			background-image: url('../../img/areas-of-focus-cloud-mobile.svg');
+			padding-bottom: 133%;
+			background-repeat: no-repeat;
+			background-size: 160%;
+			background-position: center;
+			margin-top: -18%;
+			@include media($medium-screen) {
+				padding-bottom: 54%;
+				background-image: url('../../img/areas-of-focus-cloud.svg');
+				background-repeat: no-repeat;
+				background-size: 100%;
+				background-position: center;
+				margin-top: 0;
+			}
+
 			@include media($large-screen) {
-				float: left;
-				//width: 60%;
-				@include shift(4);
-				@include span-columns(8 of 12);
-				padding-bottom: 45%;
+				@include shift(3);
+				@include span-columns(9 of 12);
+				padding-bottom: 54%;
 				background-image: url('../../img/areas-of-focus-cloud.svg');
 				background-repeat: no-repeat;
 				background-size: 100%;
@@ -227,11 +303,18 @@ body {
 			}
 
 			.excerpt {
-
+				position: absolute;
 				@include media($large-screen) {
-					position: absolute;
+					
 					@extend %vertical-center;
-					padding: 0 6em 0 5em;
+					padding: 0 15% 0 23%;
+				}
+
+				h2 {
+					margin: 0 0 $small-spacing 0;
+					@include media($large-screen) {
+						margin: $h2-margin-top 0 $small-spacing 0;
+					}
 				}
 
 			}

@@ -82,3 +82,31 @@ picture {
 .small-txt {
   font-size: $small-text;
 }
+
+// Extra Link Styles
+
+a.read-more {
+  font-family: $heading-font-family;
+  transition: all 0.1s linear;
+  display: block;
+  padding-top: 0.1rem;
+
+  &:after {
+    font-family: 'Metrize-Icons';
+    padding-left: 0.5rem;
+    top: 0.6rem;
+    position: relative;
+    font-size: 1.98rem;
+    content: "\e105";
+    transition: all 0.1s linear;
+  }
+
+  &:hover {
+    
+    &:after {
+      font-size: 1.8rem;
+      top: 0.5rem;
+      padding-left: 0.4rem;
+    }
+  }
+}
