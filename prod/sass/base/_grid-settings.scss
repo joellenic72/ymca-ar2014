@@ -11,19 +11,14 @@
 $visual-grid: true;
 
 $mobile: em(480);
-
-// In-Between Mobile
-$mobile-1: em(400);
-$mobile-2: em(370);
-$mobile-3: em(520);
+$mobile-max: em(639);
 
 $medium-screen: em(640);
 $large-screen: em(860);
+$xlarge-screen: em(1100);
 
 $mobile-screen: new-breakpoint(max-width $mobile 4);
-$mobile-screen-1: new-breakpoint(min-width $mobile-1 4);
-$mobile-screen-2: new-breakpoint(min-width $mobile-2 4);
-$mobile-screen-3: new-breakpoint(min-width $mobile-3 4);
-
+$mobile-max-screen: new-breakpoint(max-width $mobile-max 4);
 $medium-screen-up: new-breakpoint(min-width $medium-screen 4);
 $large-screen-up: new-breakpoint(min-width $large-screen 12);
+$xlarge-sreen-up: new-breakpoint(min-width $xlarge-screen 12);
