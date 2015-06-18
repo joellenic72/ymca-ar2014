@@ -1,4 +1,5 @@
 // Homepage Styles
+
 body {
 	background-image: url(../../img/bg-pattern.png);
 	background-color: $bg-color;
@@ -417,77 +418,6 @@ body {
 					}
 				}
 
-			}
-		}
-	}
-}
-
-
-
-// Footer Styles
-.footer {
-	width: 100%;
-	&:before {
-		content: "";
-		width: 100%;
-		height: 100%;
-		padding-bottom: 13.85%;
-		display: block;
-		background-image: url('../../img/footer-cloud.svg');
-		background-repeat: no-repeat;
-		background-size: 100%;
-		background-position: center;
-	}
-	img {
-		display: block;
-	}
-	.footer_info {
-		background: $green2;
-		color: $white;
-		@include clearfix;
-		text-align: center;
-		@include media($medium-screen) {
-			padding-top: $base-spacing;
-			text-align: left;
-		}
-		.footer_social {
-			display: block;
-			@include media($medium-screen) {
-				display: inline-block;
-				float: right;
-				padding-right: 5%;
-			}
-			
-			h4 {
-				margin: 0 0 $small-spacing 0;
-			}
-
-			.social_icons {
-				padding-bottom: $base-spacing;
-
-				li {
-					display: inline-block;
-					padding-right: em(15);
-					&:last-child {
-						padding-right: 0;
-					}
-					a {
-						font-size: em(32);
-						color: $white;
-					}
-				}
-			}
-		}
-
-		.copyright {
-			display: block;
-			@include media($medium-screen) {
-				display: inline-block;
-				float: left;
-				padding: 2.5rem 0 0 5%;
-			}
-			p {
-				font-size: 1rem;
 			}
 		}
 	}

@@ -1,9 +1,15 @@
 // Typography
+
+html{
+	font-size: 16px;
+}
+
 $base-font-family: Verdana,Geneva,sans-serif;
 $heading-font-family: "cachet-bold";
 
 // Font Sizes - Typographic Scale: Golden Section
 
+$base-font-size-mobile: 1rem;
 $base-font-size: 1.125rem;
 $base-line-height: 1.6875rem;
 $heading-line-height: 1.2;

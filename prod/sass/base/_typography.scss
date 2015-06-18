@@ -3,7 +3,11 @@ body {
   -webkit-font-smoothing: antialiased;
   color: $base-font-color;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: $base-font-size-mobile;
+  @include media($medium-screen) {
+    font-size: $base-font-size;
+  }
+
   line-height: $base-line-height;
 }
 
@@ -14,7 +18,7 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
-  font-size: $base-font-size;
+  //font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
@@ -44,7 +48,6 @@ h4 {
 }
 
 p {
-  font-size: $base-font-size;
   margin: 0 0 $small-spacing;
 }
 
