@@ -52,6 +52,50 @@
 				@include span-columns(4);
 				padding: 0;
 			}
+			
+			.photo_gallery_wrap {
+				position: relative;
+				@include media($large-screen) {
+					padding-top: 7.5rem;
+				}
+				.photo_gallery {
+					width: 60%;
+					height: 60%;
+					overflow: hidden;
+					margin: 0 auto;
+					z-index: 10;
+					position: relative;
+					@include media($large-screen) {
+						float: right;
+						width: 80%;
+						height: 80%;
+					}
+					img {
+						border: 15px solid $white;
+						border-radius: 50%;
+					}
+				}
+
+				figcaption {
+					width: 11.1rem;
+					height: 11.1rem;
+					border-radius: 5.55rem;
+					background: $white;
+					position: relative;
+					text-align: center;
+					@include media($large-screen) {
+						margin-top: 57%;
+					}
+
+					h4 {
+						@include vertical-center;
+						position: absolute;
+						width: 100%;
+						margin: 0;
+					}
+				}
+			}
+
 		}
 }
 
