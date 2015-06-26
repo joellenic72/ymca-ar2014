@@ -53,8 +53,11 @@ body {
 .areas_of_focus {
 	width: 100%;
 	padding: 40% 0 0 0;
+	background-image: url('../../img/vertical-bubble-bg.svg');
+	background-repeat: repeat-y;
+	background-size: contain;
 	@include media($medium-screen) {
-		padding: 40% 5% 0 5%;
+		padding: 40% 5% 15% 5%;
 		@include outer-container;
 	}
 

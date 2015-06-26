@@ -60,7 +60,9 @@ body {
 	@include transform(translateY(-50%));
 }
 
-
+.clearfix {
+	@include clearfix;
+}
 
 /*=======================================
 LOAD FONTS

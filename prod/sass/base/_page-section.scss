@@ -23,6 +23,7 @@
 
 .spotlight_story_outer_wrap {
 	width: 100%;
+	z-index: 2;
 	&:before {
 		content: "";
 		width: 100%;
@@ -133,6 +134,17 @@
 			}
 
 		}
+}
+
+.stats_wrapper {
+	height: 4000px;
+	margin-top: -15%;
+	padding-bottom: 15%;
+	background-image: url('../../img/vertical-bubble-bg.svg');
+	background-repeat: repeat-y;
+	background-size: contain;
+	position: relative;
+	z-index: -1;
 }
 
 
