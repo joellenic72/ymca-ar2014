@@ -140,11 +140,135 @@
 	height: 4000px;
 	margin-top: -15%;
 	padding-bottom: 15%;
+	@include outer-container;
 	background-image: url('../../img/vertical-bubble-bg.svg');
 	background-repeat: repeat-y;
 	background-size: contain;
 	position: relative;
 	z-index: -1;
+	
+	.stats_headline_container {
+		@include fill-parent;
+		@include clearfix;
+		.stats_headline {
+			background-repeat: no-repeat;
+			background-size: 120%;
+			background-position: center;
+			position: relative;
+			
+			@include media($medium-screen) {
+				@include outer-container;
+				background-image: url('../../img/stats-headline-cloud.svg');
+				background-size: 115%;
+				padding-bottom: 67%;
+				margin-top: 10%;
+			}
+
+			@include media($large-screen) {
+				@include span-columns(10);
+				background-size: 100%;
+				padding-bottom: 49%;
+				margin-top: 10%;
+			}
+
+			@include media($xlarge-screen) {
+				@include span-columns(8);
+				padding-bottom: 39%;
+				margin-top: 15%;
+			}
+	
+			.stats_headline_inner {
+				width: 80%;
+				padding: 0 0 0 26%;
+				@include vertical-center;
+				position: absolute;
+				
+				h4 {
+					margin: 0;
+				}
+	
+				h2 {
+					margin-top: 0;
+				}
+			}
+	
+		}
+	}
+
+
+	.stat_container {
+		@include fill-parent;
+		@include clearfix;
+		
+		@include media($medium-screen) {
+			margin: 3% auto;
+		}
+
+		@include media($large-screen) {
+			margin: 0 auto;
+		}
+
+		.stat_right {
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			position: relative;
+			
+			@include media($medium-screen) {
+				@include outer-container;
+				margin: 0 6%;
+				background-image: url('../../img/stat-cloud.svg');
+				padding-bottom: 53.5%;
+			}
+
+			@include media($large-screen) {
+				@include shift(4);
+				@include span-columns(8);
+				padding-bottom: 40.5%;
+			}
+
+			@include media($xlarge-screen) {
+				@include shift(5);
+				@include span-columns(7);
+				padding-bottom: 34.5%;
+			}
+		}
+
+		.stat_left {
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			position: relative;
+			
+			@include media($medium-screen) {
+				@include outer-container;
+				margin: 0 6%;
+				background-image: url('../../img/stat-cloud.svg');
+				padding-bottom: 53.5%;
+			}
+
+			@include media($large-screen) {
+				@include span-columns(8);
+				padding-bottom: 40.5%;
+			}
+			@include media($xlarge-screen) {
+				@include span-columns(7);
+				padding-bottom: 34.5%;
+			}
+		}
+	}
+
+	.stat_inner {
+		@include vertical-center;
+		position: absolute;
+		padding: 0 20%;
+
+		p {
+			margin: 0;
+		}
+	}
+
+
 }
 
 
