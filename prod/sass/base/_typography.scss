@@ -100,12 +100,39 @@ a.read-more {
 
   &:after {
     font-family: 'Metrize-Icons';
-    padding-left: 0.5rem;
-    top: 0.6rem;
-    position: relative;
+    margin-left: 0.5rem;
+    vertical-align: middle;
     font-size: 1.98rem;
+    width: 1.98rem;
+    height: 1.98rem;
+    line-height: 1;
+    display: inline-block;
     content: "\e105";
     transition: all 0.1s linear;
+  }
+
+  &:hover {
+    
+    &:after {
+      margin-left: .8rem;
+    }
+  }
+}
+
+a.back {
+  font-family: $heading-font-family;
+  transition: all 0.1s linear;
+  display: block;
+  padding-top: 0.1rem;
+  margin: $base-spacing 0;
+
+  &:before {
+    font-family: 'Metrize-Icons';
+    margin-right: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.98rem;
+    content: "\e112";
   }
 
   &:hover {

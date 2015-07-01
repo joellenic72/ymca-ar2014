@@ -50,6 +50,10 @@
 					a {
 						font-size: em(32);
 						color: $white;
+
+						&:hover {
+							color: darken($white, 15%);
+						}
 					}
 				}
 			}

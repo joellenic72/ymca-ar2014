@@ -16,6 +16,10 @@
 				width: 75%;
 			}
 		}
+
+		h1 {
+			@include visuallyhidden;
+		}
 	}
 }
 
@@ -60,6 +64,15 @@
 			color: $white;
 			@include span-columns(12);
 			padding: 0 5%;
+
+			h4 {
+				margin-bottom: 0;
+			}
+
+			h2 {
+				margin-top: 0;
+			}
+
 			@include media($large-screen) {
 				@include shift(1);
 				@include span-columns(6);
@@ -101,19 +114,17 @@
 					img {
 						border: 15px solid $white;
 						border-radius: 50%;
+						//box-shadow: 3px 1px 0px 1px $grey;
+
 					}
 				}
 
 				figcaption {
-					width: 11.1rem;
-					height: 11.1rem;
-					border-radius: 5.55rem;
 					margin-top: -16%;
   					margin-left: 0%;
   					margin-bottom: 5em;
-					background: $white;
 					position: relative;
-					text-align: center;
+					
 					@include media($medium-screen) {
 						margin-top: -12%;
   						margin-left: 15%;
@@ -124,11 +135,37 @@
 						margin-bottom: 0;
 					}
 
-					h4 {
-						@include vertical-center;
-						position: absolute;
-						width: 100%;
-						margin: 0;
+					a {
+						width: 11.1rem;
+						height: 11.1rem;
+						border-radius: 5.55rem;
+						background: $white;
+						box-shadow: 1px 3px 0px 2px $grey;
+						display: block;
+						text-align: center;
+						position: relative;
+						transition: all 0.1s linear;
+
+						&:hover {
+							background: darken($white, 5%);
+							@include transform(rotateY(15deg));
+						}
+						
+						.gallery_button_inner {
+							@include vertical-center;
+							position: absolute;
+							width: 100%;
+							padding: 2rem;
+
+							img {
+								width: 2.5rem;
+							}
+							
+							h4 {
+								margin: 0;
+								color: $grey;
+							}
+						}
 					}
 				}
 			}
@@ -374,6 +411,7 @@
 	.back_home_wrapper {
 		@include outer-container;
 		text-align: center;
+		padding: 5% 0;
 
 		.back_home {
 			margin: 0 auto;
@@ -383,16 +421,30 @@
 				width: 100%;
 				height: 100%;
 				border-radius: 50%;
+				color: $white;
 				background: $green2;
+				box-shadow: 1px 3px 0px 2px darken($green2, 15%);
 				display: block;
 				position: relative;
+				transition: all 0.1s linear;
 
 				&:hover {
 					background: darken($green2, 5%);
+					@include transform(rotateY(15deg));
 				}
 
 				h4 {
 					@include vertical-center;
+
+					&:before {
+    					font-family: 'Metrize-Icons';
+    					margin-right: 0.5rem;
+    					font-size: 1.98rem;
+    					display: inline-block;
+    					vertical-align: middle;
+    					content: "\e112";
+    					transition: all 0.1s linear;
+  					}
 				}
 			}
 		}
