@@ -1,8 +1,8 @@
 // Header Styles
 
 .head_primary {
-
-
+	position: absolute;
+	z-index: 1000;
 	.site_logo {
 		
 		@include media($large-screen) {
