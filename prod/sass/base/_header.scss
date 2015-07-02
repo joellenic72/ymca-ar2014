@@ -1,2 +1,86 @@
 // Header Styles
 
+.head_primary {
+
+
+	.site_logo {
+		
+		@include media($large-screen) {
+			padding: 2.7rem 0 0 2.7rem;
+		}
+
+		a {
+			display: inline-block;
+			clear: both;
+			@include clearfix;
+		}
+
+		figure {
+			float: left;
+
+			img {
+				width: 8rem;
+			}
+		}
+		
+		figcaption {
+			float: left;
+			
+			@include media($large-screen) {
+				padding-top: 2.33rem;
+			}
+
+			h4 {
+				line-height: 1.2;
+				margin: 0;
+			}
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Overlay Navigation
+
+.overlay_nav {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background: $green2;
+	z-index: 5000;
+	@include transform(translateY(-100%));
+	@include transition(all .3s ease-in);
+	.main_navigation {
+		text-align: center;
+		position: relative;
+		width: 100%;
+		height: 100%;
+
+		ul {
+			text-align: center;
+			display: inline-block;
+			@include vertical-center;
+		}
+			
+	}
+}
+
+.overlay_active {
+	@include transform(translateY(0));
+}
