@@ -3,8 +3,10 @@
 .head_primary {
 	position: absolute;
 	z-index: 1000;
+	width: 100%;
 	.site_logo {
-		
+		float: left;
+		display: inline-block;
 		@include media($large-screen) {
 			padding: 2.7rem 0 0 2.7rem;
 		}
@@ -37,23 +39,32 @@
 		}
 
 	}
+
+	.head_primary_nav {
+		float: right;
+		display: inline-block;
+
+		ul {
+			
+			padding: 4.7rem 2.7rem 0 0;
+			
+			li {
+
+				.donate {
+
+					
+				}
+
+				display: inline-block;
+				padding-right: 2.5rem;
+
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Overlay Navigation
 
