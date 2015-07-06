@@ -1,8 +1,7 @@
 // Section Page Styles
 
 .section_header {
-	min-height: 40%;
-	height: 40%;
+	height: 60vh;
 	text-align: center;
 	position: relative;
 
@@ -28,6 +27,7 @@
 .spotlight_story_outer_wrap {
 	width: 100%;
 	z-index: 2;
+	margin-top: -14.1%;
 	&:before {
 		content: "";
 		width: 100%;
@@ -412,6 +412,7 @@
 		@include outer-container;
 		text-align: center;
 		padding: 5% 0;
+		z-index: 50;
 
 		.back_home {
 			margin: 0 auto;

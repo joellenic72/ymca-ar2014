@@ -4,9 +4,11 @@
 	position: absolute;
 	z-index: 1000;
 	width: 100%;
+	@include transition(all .1s linear);
 	.site_logo {
 		float: left;
 		display: inline-block;
+		padding: 0.8rem 0 0.6em 1.2rem;
 		@include media($large-screen) {
 			padding: 2.7rem 0 0 2.7rem;
 		}
@@ -14,7 +16,6 @@
 		a {
 			display: inline-block;
 			clear: both;
-			@include clearfix;
 			color: $green2;
 			@include transition(all .3s ease-in);
 
@@ -27,15 +28,23 @@
 			float: left;
 
 			img {
-				width: 8rem;
+				width: 4.5rem;
+				display: inline-block;
+				vertical-align: middle;
+
+				@include media($medium-screen) {
+					width: 8rem;
+				}
 			}
 		}
 		
 		figcaption {
 			float: left;
-			
-			@include media($large-screen) {
+			display: none;
+			@include media($medium-screen) {
+				display: block;
 				padding-top: 2.33rem;
+
 			}
 
 			h4 {
@@ -55,8 +64,10 @@
 		display: inline-block;
 
 		ul {
-			
-			padding: 4.7rem 2.7rem 0 0;
+			padding: 1.75rem 2.1rem 0 0;
+			@include media($medium-screen) {
+				padding: 4.7rem 2.7rem 0 0;
+			}
 			
 			li {
 				
@@ -85,6 +96,66 @@
 		}
 	}
 }
+
+.fixed_header {
+	position: fixed;
+	background: $white;
+	border-bottom: 1px solid $grey;
+	.site_logo {
+		
+		padding: 0.8rem 0 0.6em 1.2rem;
+		@include media($medium-screen) {
+			padding: 1.2rem 0 0.9em 1.2rem;
+		}
+
+		figure {
+			img {
+				width: 4.5rem;
+			}
+		}
+		
+		figcaption {
+
+			@include media($large-screen) {
+				padding-top: 0rem;
+				padding-left: rem;
+			}
+		}
+
+		.opener_tagline {
+			display: none;
+		}
+
+		.fixed_tagline {
+			display: none;
+			@include media($medium-screen) {
+				display: block;
+			}
+
+			h3 {
+				margin: 0;
+				line-height: 1;
+			}
+
+			h4 {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	.head_primary_nav {
+
+		ul {
+			padding: 1.75rem 2.1rem 0 0;
+			@include media($medium-screen) {
+				padding: 2.1rem 2.1rem 0 0;
+			}
+		}
+	}
+	
+}
+
+
 
 // Overlay Navigation
 
