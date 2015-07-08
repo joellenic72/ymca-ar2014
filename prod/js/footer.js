@@ -6,10 +6,8 @@ $(document).ready(function() {
 		$(window).scroll(function() {
 			if ($(window).scrollTop() > bodyContentTop) {
 				$('.head_primary').addClass('fixed_header');
-				console.log('fixxxed');
 			} else {
 				$('.head_primary').removeClass('fixed_header');
-				console.log('Removed fixed')
 			}
 		});
 
@@ -20,5 +18,61 @@ $(document).ready(function() {
 		
 	}
 
+	function particleGenerator() {
+
+		(function() {
+  			var colors, interval, middleX, middleY, radius, rand, s, sample;
+
+  			s = Snap("#particles");
+
+  			rand = function(min, max) {
+    			return Math.floor(Math.random() * (max - min) + min);
+  			};
+
+  			sample = function(a) {
+    			return a[rand(0, a.length)];
+  			};
+
+  			middleX = Math.floor($("#particles").width() / 2);
+
+  			middleY = Math.floor($("#particles").height() / 2);
+
+  			colors = [
+  			"247, 173, 64", 
+  			"240, 121, 59", 
+  			"217, 90, 56", 
+  			"231, 37, 52",
+  			"164, 46, 55",
+  			"193, 40, 138"];
+
+  			interval = 10;
+
+  			radius = 15;
+
+  			setInterval(function() {
+    			return s.circle(middleX, middleY, radius).attr({
+      				fill: "rgb(" + (sample(colors)) + ")"
+    			}).animate({
+      				transform: "t" + (rand(-900, 900)) + " " + (rand(-600, 600)),
+      				opacity: 0
+    			}, rand(2000, 8000), mina.easein);
+  			}, interval);
+
+
+  
+  			$("#particles").click(function(e) {
+    			middleX = e.clientX;
+    			middleY = e.clientY;
+    			return s.circle(middleX, middleY, 5).attr({
+      				fill: "#fff"
+    			}).animate({
+      				opacity: 0
+    			}, 500, mina.easein);
+  			});
+
+		}).call(this);
+			
+	}
+	//particleGenerator();
 
 });
