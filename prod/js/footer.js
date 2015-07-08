@@ -15,8 +15,38 @@ $(document).ready(function() {
 	stickyHeader();
 
 	function menuButton() {
-		
-	}
+
+		var menuOpenBtn = $('.menu_button_open'),
+		menuCloseBtn = $('.menu_button_close'),
+		menuOverlay = $('.overlay_nav');
+
+		buttonActive = true;
+
+		menuOpenBtn.click(function(e){
+			e.preventDefault();
+
+			if (buttonActive) {
+				menuOverlay.addClass('overlay_active');
+				buttonActive = false;
+			} else {
+				menuOverlay.removeClass('overlay_active');
+				buttonActive = true;
+			}
+		});
+
+		menuCloseBtn.click(function(e) {
+			e.preventDefault();
+
+			if (buttonActive === false) {
+				menuOverlay.removeClass('overlay_active');
+				buttonActive = true;
+			} else {
+				menuOverlay.addClass('overlay_active');
+				buttonActive = false;
+			}
+		});
+
+	} menuButton()
 
 	function particleGenerator() {
 
@@ -49,6 +79,7 @@ $(document).ready(function() {
 
   			radius = 15;
 
+  			// Generate Circle
   			setInterval(function() {
     			return s.circle(middleX, middleY, radius).attr({
       				fill: "rgb(" + (sample(colors)) + ")"
@@ -59,7 +90,6 @@ $(document).ready(function() {
   			}, interval);
 
 
-  
   			$("#particles").click(function(e) {
     			middleX = e.clientX;
     			middleY = e.clientY;
