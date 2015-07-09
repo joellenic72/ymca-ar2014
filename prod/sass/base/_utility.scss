@@ -73,10 +73,65 @@ body {
  	margin: -1px; padding: 0; border: 0;
 }
 
-// Menu Button
+// Menu Nav Close Button
+
+$button-size: 2.5rem;
+$transition: .3s;
+
+@mixin line {
+	display: inline-block;
+	width: $button-size;
+	height: $button-size/7;
+	background: $white;
+	transition: $transition;
+}
+
+.menu_button_close {
+	display: inline-block;
+	transition: $transition;
+	opacity: 0.9;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&:active {
+		transition: 0;
+		background: rgba(0, 0, 0, 0.1);
+	}
+
+	.lines {
+		position: relative;
+		width: $button-size;
+		display: inline-block;
+		&:before, &:after {
+			@include line;
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			transform-origin: 50% 50%;
+			width: $button-size;
+		}
+		&:before {
+			transform: rotate3d(0,0,1,45deg);
+		}
+		&:after {
+			transform: rotate3d(0,0,1,-45deg);
+		}
 
 
+	}
+}
 
+// Fix Body when Menu Nav is Open
+.scroll {
+	overflow: scroll;
+}
+
+.fixed {
+	overflow: hidden;
+}
 
 /*=======================================
 LOAD FONTS

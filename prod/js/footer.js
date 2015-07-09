@@ -18,7 +18,8 @@ $(document).ready(function() {
 
 		var menuOpenBtn = $('.menu_button_open'),
 		menuCloseBtn = $('.menu_button_close'),
-		menuOverlay = $('.overlay_nav');
+		menuOverlay = $('.overlay_nav'),
+		body = $('body');
 
 		buttonActive = true;
 
@@ -27,9 +28,11 @@ $(document).ready(function() {
 
 			if (buttonActive) {
 				menuOverlay.addClass('overlay_active');
+				body.addClass('fixed');
 				buttonActive = false;
 			} else {
 				menuOverlay.removeClass('overlay_active');
+				body.removeClass('fixed');
 				buttonActive = true;
 			}
 		});
@@ -39,9 +42,11 @@ $(document).ready(function() {
 
 			if (buttonActive === false) {
 				menuOverlay.removeClass('overlay_active');
+				body.removeClass('fixed');
 				buttonActive = true;
 			} else {
 				menuOverlay.addClass('overlay_active');
+				body.addClass('fixed');
 				buttonActive = false;
 			}
 		});
