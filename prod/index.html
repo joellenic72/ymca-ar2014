@@ -33,6 +33,7 @@
 </head>
 <body>
 <div class="wrap">
+    <!-- START: Header -->
     <header class="head_primary">
         <nav class="site_logo">
             <a href="index.html">
@@ -57,6 +58,8 @@
             </ul>
         </nav>
     </header>
+    <!-- END: Header -->
+    <!-- START: Opening Title Section-->
     <section class="opener">
         <header class="opener_title">
             <img src="img/opener-title.svg" alt="The Science of Us: YMCADC 2014 Annual Report">
@@ -64,6 +67,14 @@
         </header>
         <!-- Particle generator -->
         <svg id="particles"></svg>
+        <div class="scroll_down">
+            <div class="scroll_down_inner">
+                <h4>Scroll Down</h4>
+                <div class="down_icon">
+                    <div data-icon="&#xe11c;"></div>
+                </div>
+            </div>
+        </div>
         <div class="opener_cloud_right">
             <img src="img/opener-cloud-right.svg" alt="">
         </div>
@@ -71,8 +82,9 @@
             <img src="img/opener-cloud-left.svg" alt="">
         </div>
     </section>
-
+    <!-- END: Opening Title Section-->
     <div class="body_content">
+        <!-- START: Areas of Focus -->
         <section class="areas_of_focus">
             <section class="youth_development">
                 <div class="figure_wrap">
@@ -82,7 +94,7 @@
                     <div class="excerpt">
                         <h2>Youth Development</h2>
                         <p>At the Y, we work to get toddlers on the road to learning and keep young adults on the path to a promising future. That’s why our youth programs provide a safe and guided place to learn foundational skills, develop healthy, trusting relationships and build self-reliance.</p>
-                        <a href="section.html" class="read-more">Read More</a>
+                        <a href="youth-development.html" class="read-more">Read More</a>
                     </div>
                 </div>
             </section>
@@ -111,7 +123,8 @@
                 </div>
             </section>
         </section>
-    </div>
+        <!-- END: Areas of Focus -->
+    </div><!-- END: Body Content -->
     <footer class="footer">
         <div class="footer_info">
             <div class="footer_social">
@@ -129,12 +142,11 @@
         </div>
     </footer>
     <!-- START: Overlay Navigation -->
-    
     <div class="overlay_nav">
         <a href="#" class="menu_button_close">MENU</a>
         <nav class="main_navigation" role="navigation">
             <ul>
-                <li><a href="#">Youth Development</a></li>
+                <li><a href="youth-development.html">Youth Development</a></li>
                 <li><a href="#">Healthy Living</a></li>
                 <li><a href="#">Social Responsibility</a></li>
                 <li><a href="#">Get Involved</a></li>
@@ -143,9 +155,8 @@
             </ul>
         </nav>
     </div>
-    
     <!-- END: Overlay Navigation -->
-</div>
+</div><!-- wrap -->
 <script type="text/javascript" src="/js/libs/snap.svg-min.js"></script>
 <script type="text/javascript" src="/js/footer.js"></script>
 </body>

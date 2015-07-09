@@ -90,6 +90,33 @@ picture {
   font-size: $small-text;
 }
 
+
+// Nav Styles
+
+@mixin nav-type {
+  font-family: $heading-font-family;
+  color: $white;
+  font-size: $h4;
+  display: inline-block;
+  line-height: $h4-line-height;
+  margin: $small-spacing 0 $small-spacing 0;
+
+  @include media($medium-screen) {
+    font-size: $h3;
+    line-height: $h4-line-height;
+    margin: $h4-margin-top 0 $h4-margin-bottom 0;
+  }
+
+  @include media($large-screen) {
+    font-size: $h2;
+    line-height: $h4-line-height;
+    margin: $h4-margin-top 0 $h4-margin-bottom 0;
+  }
+}
+
+
+
+
 // Extra Link Styles
 
 a.read-more {

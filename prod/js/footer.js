@@ -46,14 +46,15 @@ $(document).ready(function() {
 			}
 		});
 
-	} menuButton()
+	}
+	menuButton();
 
 	function particleGenerator() {
 
 		(function() {
   			var colors, interval, middleX, middleY, radius, rand, s, sample;
 
-  			s = Snap("#particles");
+  			s = Snap('#particles');
 
   			rand = function(min, max) {
     			return Math.floor(Math.random() * (max - min) + min);
@@ -63,9 +64,10 @@ $(document).ready(function() {
     			return a[rand(0, a.length)];
   			};
 
-  			middleX = Math.floor($("#particles").width() / 2);
+  			// Get axis for circle generator
+  			middleX = Math.floor($('#particles').width() / 2);
 
-  			middleY = Math.floor($("#particles").height() / 2);
+  			middleY = Math.floor($('#particles').height() / 2);
 
   			colors = [
   			"247, 173, 64", 
@@ -82,15 +84,15 @@ $(document).ready(function() {
   			// Generate Circle
   			setInterval(function() {
     			return s.circle(middleX, middleY, radius).attr({
-      				fill: "rgb(" + (sample(colors)) + ")"
+      				fill: 'rgb(' + (sample(colors)) + ')'
     			}).animate({
-      				transform: "t" + (rand(-900, 900)) + " " + (rand(-600, 600)),
+      				transform: 't' + (rand(-900, 900)) + ' ' + (rand(-600, 600)),
       				opacity: 0
     			}, rand(2000, 8000), mina.easein);
   			}, interval);
 
-
-  			$("#particles").click(function(e) {
+  			// Update cirlce generator axis to user click
+  			$('#particles').click(function(e) {
     			middleX = e.clientX;
     			middleY = e.clientY;
     			return s.circle(middleX, middleY, 5).attr({
