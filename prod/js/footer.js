@@ -2,12 +2,16 @@ $(document).ready(function() {
 
 	function stickyHeader() {
 		var bodyContentTop = $('.body_content').offset().top;
+		var header = $('.head_primary');
+		var closeBtn = $('.close_button_wrap');
 
 		$(window).scroll(function() {
 			if ($(window).scrollTop() > bodyContentTop) {
-				$('.head_primary').addClass('fixed_header');
+				header.addClass('fixed_header');
+				closeBtn.addClass('fixed_nav_pos');
 			} else {
-				$('.head_primary').removeClass('fixed_header');
+				header.removeClass('fixed_header');
+				closeBtn.removeClass('fixed_nav_pos');
 			}
 		});
 

@@ -191,12 +191,25 @@
 	.close_button_wrap {
 		position: absolute;
 		display: block;
-		top: 4.1rem;
-		right: 2.7rem;
+		top: 1.35rem;
+		right: 1.35rem;
 		z-index: 1;
+		@include media($medium-screen) {
+			top: 4.1rem;
+			right: 2.7rem;
+		}
+	}
+
+	.fixed_nav_pos {
+		top: 1.2rem;
+		@include media($medium-screen) {
+			top: 1.6rem;
+		}
 	}
 }
 
 .overlay_active {
 	@include transform(translateY(0));
 }
+
+

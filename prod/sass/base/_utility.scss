@@ -12,6 +12,7 @@ body {
 	position: relative;
 	overflow-x: hidden;
 }
+/*
 * {
    	@include box-sizing(border-box);
 
@@ -20,7 +21,7 @@ body {
    		@include box-sizing(border-box);
    	}
 }
-
+*/
 // Clears & Floats
 .left {
 	float: left !important;
@@ -33,15 +34,6 @@ body {
 		clear: both;
 		display: table;
 		content: '';
-	}
-}
-
-// Easy Remove for mobile
-
-.nomobile {
-	// Need to re-write for neat
-	@include media($mobile) {
-		display: none;
 	}
 }
 
@@ -124,9 +116,53 @@ $transition: .3s;
 	}
 }
 
+// Scroll Down Indicator
+
+.scroll_down {
+	position: absolute;
+	width: 100%;
+	top: 90vh;
+	text-align: center;
+	z-index: 1000;
+	display: none;
+
+	@include media($medium-screen) {
+		display: block;
+	}
+
+	.scroll_down_inner {
+		display: inline-block;
+		color: $white;
+		
+		h4 {
+			margin-bottom: 0.6875rem;
+		}
+
+		.down_icon {
+			font-size: 2.2rem;
+			@include animation(pulse 2.5s ease-in-out infinite);
+		}
+	}
+}
+
+@keyframes pulse {
+	0% {
+		@include transform(scale(1));
+	}
+	50% {
+		@include transform(scale(1.3));
+	}
+	100% {
+		@include transform(scale(1));
+	}
+}
+
+
+
+
 // Fix Body when Menu Nav is Open
 .scroll {
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 .fixed {
