@@ -1,12 +1,12 @@
-// Healthy Living Page Specific Styles
+// Youth Development Page Specific Styles
 
-.healthy_living {
+.youth_development {
 	
 	.section_header .section_title img {	
-		width: 70%;
+		width: 90%;
 		@include filter(drop-shadow(6px 6px 8px rgba(0,0,0,0.35)));
 		@include media($medium-screen) {
-			width: 40%;
+			width: 59%;
 		}	
 	}
 }

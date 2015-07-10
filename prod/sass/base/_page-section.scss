@@ -12,7 +12,7 @@
 			width: 90%;
 			@include filter(drop-shadow(6px 6px 8px rgba(0,0,0,0.35)));
 			@include media($medium-screen) {
-				width: 75%;
+				width: 85%;
 			}
 		}
 
