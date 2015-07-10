@@ -177,11 +177,28 @@
 
 .spotlight_video {
 	@include outer-container;
-
+	padding: 5% 5%;
+	@include media($large-screen) {
+		padding: 5% 0;
+	}
 	.video {
 		width: 100%;
-		height: 42rem;
+		padding-bottom: 56.25%;
 		background: $grey;
+		position: relative;
+
+		@include media($large-screen) {
+			@include shift(1);
+			@include span-columns(10);
+		}
+
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 	}
 }
 
