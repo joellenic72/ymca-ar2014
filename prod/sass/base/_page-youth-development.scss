@@ -9,4 +9,14 @@
 			width: 59%;
 		}	
 	}
+
+	.footer {
+		&:before {
+			background-image: url('../../img/youth-development-footer-cloud.svg');
+		}
+
+		.footer_info {
+			background: $orange2;
+		}
+	}
 }

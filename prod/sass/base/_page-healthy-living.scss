@@ -9,4 +9,27 @@
 			width: 40%;
 		}	
 	}
+
+	.spotlight_story_outer_wrap {
+
+		&:before {
+			background-image: url('../../img/section-healthy-living-cloud-before.svg');
+		}
+		&:after{
+			background-image: url('../../img/section-healthy-living-cloud-after.svg');
+		}
+		.spotlight_story_wrap {
+			background: $orange1;
+		}
+	}
+
+	.footer {
+		&:before {
+			background-image: url('../../img/healthy-living-footer-cloud.svg');
+		}
+
+		.footer_info {
+			background: $orange1;
+		}
+	}
 }

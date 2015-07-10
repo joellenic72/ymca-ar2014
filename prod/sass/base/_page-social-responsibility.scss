@@ -1,5 +1,27 @@
 // Social Responsibility Page Specific Styles
 
 .social_responsibility {
-	
+
+	.spotlight_story_outer_wrap {
+
+		&:before {
+			background-image: url('../../img/section-social-responsibility-cloud-before.svg');
+		}
+		&:after{
+			background-image: url('../../img/section-social-responsibility-cloud-after.svg');
+		}
+		.spotlight_story_wrap {
+			background: $purple3;
+		}
+	}
+
+	.footer {
+		&:before {
+			background-image: url('../../img/social-responsibility-footer-cloud.svg');
+		}
+
+		.footer_info {
+			background: $purple3;
+		}
+	}	
 }
