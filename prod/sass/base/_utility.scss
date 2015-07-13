@@ -12,16 +12,7 @@ body {
 	position: relative;
 	overflow-x: hidden;
 }
-/*
-* {
-   	@include box-sizing(border-box);
 
-   	&:before,
-   	&:after {
-   		@include box-sizing(border-box);
-   	}
-}
-*/
 // Clears & Floats
 .left {
 	float: left !important;
@@ -168,6 +159,65 @@ $transition: .3s;
 .fixed {
 	overflow: hidden;
 }
+
+// Preloader
+
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $grey;
+	z-index: 9999;
+
+	.preloader_inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		.cloud_top {
+			position: absolute;
+			width: 170%;
+			@include transform(translate(-24%, -25%));
+		}
+
+		.cloud_top_loaded {
+
+		}
+
+		.cloud_bottom {
+			position: absolute;
+			width: 135%;
+			bottom: 0;
+			@include transform(translate(-9%, 22%));
+		}
+
+		.cloud_bottom_loaded {
+
+		}
+
+		.preloader_logo {
+			position: absolute;
+			width: 100%;
+			text-align: center;
+
+			.preloader_logo_inner {
+				width: 25%;
+				display: inline-block;
+				vertical-align: middle;
+
+				img {
+					width: 50%;
+				}
+			}
+		}
+	}
+}
+
+
+
 
 /*=======================================
 LOAD FONTS
