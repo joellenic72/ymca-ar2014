@@ -131,6 +131,7 @@ $(document).ready(function() {
 $(window).load(function() {
 	// Preloader Function. Run after Document.ready
 	function preloader() {
+		$('.preloader').css('background-color', 'transparent');
 		$('.preloader_logo').addClass('preloader_logo_loaded');
 		$('.cloud_top').addClass('cloud_top_loaded');
 		$('.cloud_bottom').addClass('cloud_bottom_loaded').delay(2600).queue(function(next) {
