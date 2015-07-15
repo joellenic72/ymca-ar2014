@@ -58,7 +58,7 @@ body {
 
 .areas_of_focus {
 	width: 100%;
-	padding: 40% 0 0 0;
+	padding: 40% 0 20% 0;
 	background-image: url('../../img/vertical-bubble-bg.svg');
 	background-repeat: repeat-y;
 	background-size: contain;
@@ -427,6 +427,64 @@ body {
 					}
 				}
 
+			}
+		}
+	}
+
+	.timeline_link_wrapper {
+		@include outer-container;
+		text-align: center;
+		padding: 5% 0;
+		z-index: 50;
+
+		.timeline_link {
+			margin: 0 auto;
+			width: 12em;
+			height: 12em;
+
+			@include media($large-screen) {
+				width: 16em;
+				height: 16em;
+			}
+
+			a {
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				color: $white;
+				background: $purple2;
+				box-shadow: 1px 3px 0px 2px darken($green3, 15%);
+				display: block;
+				position: relative;
+				padding: 2em;
+				transition: all 0.1s linear;
+
+				&:hover {
+					background: darken($purple2, 5%);
+					@include transform(rotateY(15deg));
+				}
+
+				h3 {
+					@include vertical-center;
+					line-height: 1;
+					margin: 0;
+					font-size: $h4;
+
+					@include media($large-screen) {
+						font-size: $h3;
+					}
+					/*
+					&:before {
+    					font-family: 'Metrize-Icons';
+    					margin-right: 0.5rem;
+    					font-size: 1.98rem;
+    					display: inline-block;
+    					vertical-align: middle;
+    					content: "\e112";
+    					transition: all 0.1s linear;
+  					}
+  					*/
+				}
 			}
 		}
 	}

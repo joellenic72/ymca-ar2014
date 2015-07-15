@@ -58,6 +58,10 @@ $(document).ready(function() {
 	}
 	menuButton();
 
+	function openerClouds() {
+		
+	}
+
 	function particleGenerator() {
 
 		(function() {

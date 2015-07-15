@@ -223,6 +223,7 @@ $transition: .3s;
 
 				img {
 					width: 50%;
+					@include animation(pulse-logo 2.5s ease-in-out infinite);
 				}
 			}
 		}
@@ -233,6 +234,20 @@ $transition: .3s;
 	}
 }
 
+@keyframes pulse-logo {
+	0% {
+		@include transform(scale(1));
+		opacity: 0.8;
+	}
+	50% {
+		@include transform(scale(1.1));
+		opacity: 1.0;
+	}
+	100% {
+		@include transform(scale(1));
+		opacity: 0.8;
+	}
+}
 
 
 
