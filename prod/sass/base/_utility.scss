@@ -148,7 +148,15 @@ $transition: .3s;
 	}
 }
 
+// Particle Generator
 
+#particles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 
 
 // Fix Body when Menu Nav is Open
@@ -168,7 +176,6 @@ $transition: .3s;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: $grey;
 	z-index: 9999;
 
 	.preloader_inner {
@@ -181,10 +188,11 @@ $transition: .3s;
 			position: absolute;
 			width: 170%;
 			@include transform(translate(-24%, -25%));
+			@include transition(transform 0.8s ease-in-out 0.8s);
 		}
 
 		.cloud_top_loaded {
-
+			@include transform(translate(60%, -25%));
 		}
 
 		.cloud_bottom {
@@ -192,26 +200,35 @@ $transition: .3s;
 			width: 135%;
 			bottom: 0;
 			@include transform(translate(-9%, 22%));
+			@include transition(transform 0.8s ease-in-out 1.0s);
 		}
 
 		.cloud_bottom_loaded {
-
+			@include transform(translate(-102%, 22%));
 		}
 
 		.preloader_logo {
-			position: absolute;
 			width: 100%;
 			text-align: center;
+			@include vertical-center;
+			opacity: 1;
+			@include transition(opacity .5s ease-in);
 
 			.preloader_logo_inner {
 				width: 25%;
 				display: inline-block;
 				vertical-align: middle;
+				text-transform: uppercase;
+				color: $green2;
 
 				img {
 					width: 50%;
 				}
 			}
+		}
+
+		.preloader_logo_loaded {
+			opacity: 0;
 		}
 	}
 }
@@ -243,6 +260,8 @@ LOAD FONTS
 
 /*=======================================
 GRID HELPER CLASSES
+can be used to add class to element to 
+apply grid classes 
 ========================================*/
 
 

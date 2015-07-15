@@ -91,13 +91,16 @@ $(document).ready(function() {
   			radius = 15;
 
   			// Generate Circle
-  			setInterval(function() {
+			setInterval(function() {
     			return s.circle(middleX, middleY, radius).attr({
-      				fill: 'rgb(' + (sample(colors)) + ')'
+      				fill: "rgb(" + (sample(colors)) + ")"
     			}).animate({
-      				transform: 't' + (rand(-900, 900)) + ' ' + (rand(-600, 600)),
+      				transform: "t" + (rand(-900, 900)) + " " + (rand(-600, 600)),
       				opacity: 0
-    			}, rand(2000, 8000), mina.easein);
+    			}, rand(2000, 8000), mina.easein, function() {
+            		var particle = this;
+            		particle.remove();
+          		});
   			}, interval);
 
   			// Update cirlce generator axis to user click
@@ -108,12 +111,29 @@ $(document).ready(function() {
       				fill: "#fff"
     			}).animate({
       				opacity: 0
-    			}, 500, mina.easein);
+    			}, 500, mina.easein, function() {
+    				var particle = this;
+    				particle.remove();
+    			});
   			});
 
 		}).call(this);
 			
 	}
-	//particleGenerator();
+	particleGenerator();
 
 });
+
+$(window).load(function() {
+	// Preloader Function. Run after Document.ready
+	function preloader() {
+		$('.preloader_logo').addClass('preloader_logo_loaded');
+		$('.cloud_top').addClass('cloud_top_loaded');
+		$('.cloud_bottom').addClass('cloud_bottom_loaded').delay(2600).queue(function(next) {
+			$('.preloader').remove();
+			next();
+		});
+	} preloader();
+
+});
+
