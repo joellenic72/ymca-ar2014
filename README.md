@@ -8,7 +8,7 @@ This Project uses [Gulp.js](http://gulpjs.com/) as the build system, [Bourbon](h
 
 
 ## Local Setup
-If you’re working on my computer, its already been set up so all you have to do is open the terminal (or iTerm if you want to live a little) and type:
+If you’re working on my computer, its already been set up so all you have to do is open the terminal (or iTerm if you want to live a little) and type (type in everything after $):
 
     $ ymca-ar
     $ gulp
