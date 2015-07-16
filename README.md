@@ -19,7 +19,7 @@ The first command is an alias which will take you to _/Users/hyperion/Sites/YMCA
 If you want work on a different computer, You will have to run a new local set up that will install all necessary dependencies and then run a server with BrowserSync. This Gulp file watches all SASS, JS, and images, then compiles and reloads the assets accordingly. *note you must have [Node](https://nodejs.org/) and [NPM](https://www.npmjs.com/) installed on your global local development environment before you can run this.
     
     $ npm install -g gulp
-    $ cd [path/to/your/disired/directory]
+    $ cd path/to/your/disired/directory
     $ npm install
     $ bundle install
     $ gulp
